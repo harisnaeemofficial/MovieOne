@@ -3,7 +3,7 @@
   <head>
     <title>movieone | Welcome</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
     <link rel="stylesheet" href="scss/style.css">
   </head>
   <body>
@@ -20,12 +20,12 @@
     </header>
     <section id="banner" class="clearfix">
       <div id="banner_content_wrapper">
-        <div div="poster">
-          <img src="images/interstellar_ver2.jpg" alt="poster">
-          <img src="images/music-player-play.png" alt="play">
+        <div id="poster">
+          <img class="featured_movie" src="images/interstellar_ver2.jpg" alt="poster">
+          <img class="play_button" src="images/music-player-play.png" alt="play">
         </div>
         <div id="content">
-          <h2>Interstellar</h2>
+          <h2 class="title">Interstellar</h2>
           <div class="ratings">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -40,16 +40,16 @@
       </div>
     </section>
 
-    <section id="top_movies">
+    <section id="top_movies" class="clearfix">
       <div class="wrapper">
         <header class="clearfix">
-          <h2>popular moveis</h2>
+          <h2>popular movies</h2>
           <p class="view_more">view all movies</p>
         </header>
 
         <div class="row">
           <div class="post">
-            <img src="images/the_hunger_games.jpg" alt="poster">
+            <a href="#"><img src="images/the_hunger_games.jpg" alt="poster"></a>
             <h3 class="title">The Hunger Games</h3>
             <p class="post_info">PG13 | 120 minutes</p>
           </div>
@@ -98,7 +98,7 @@
       </div>
     </section>
 
-    <section id="top_shows">
+    <section id="top_shows" class="clearfix">
       <div class="wrapper">
         <header class="clearfix">
           <h2>popular shows</h2>
@@ -116,7 +116,7 @@
         <div class="row">
           <div class="post">
             <img src="images/vikings.jpg" alt="poster">
-            <h3 class="title">Vkings</h3>
+            <h3 class="title">Vikings</h3>
             <p class="post_info">PG13 | 6 seasons</p>
           </div>
         </div>
@@ -158,9 +158,9 @@
 
     <section id="newsletter">
       <div class="newsletter_inner">
-        <h2>Get the best tv shows and moveis in your inbox every week.</h2>
+        <h2>Get the best tv shows and movies straight in your inbox every week.</h2>
         <div class="signup_form">
-          <input type="text" placeholder="first name">
+          <input type="text" placeholder="your name">
           <input type="email" placeholder="email">
           <button class="button">subscribe</button>
         </div>
@@ -175,5 +175,6 @@
         <a href="#">Terms of Service</a>
       </div>
     </footer>
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </body>
 </html>
