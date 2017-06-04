@@ -1,6 +1,6 @@
 $main: #252529;
 $secondary: #8b8b9f;
-$highlight: #73e298;
+$highlight: #32BF61;
 $white: #fff;
 
 * {
@@ -31,45 +31,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #top_header {
-  padding: 1.5em 0;
+  padding: .8em 0;
   .logo {
     float: left;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 700;
+    margin-top: .5em;
     span {
-      font-weight: 300;
+      font-weight: 400;
       color: $highlight;
     }
   }
   #main_nav {
     float: right;
     font-size: 1em;
-    padding-top: 1em;
+    padding: 1em 0;
   }
   a {
     color: #000;
     text-decoration: none;
     margin-left: 1em;
-  }
-  a:hover {
+    padding-bottom: 2px;
+    &:hover {
     color: $highlight;
+    //border-bottom: 2px solid $highlight;
   }
+}
 }
 
 #banner {
-  background: url('../images/interstellar_background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  padding: 6.5em;
-  #banner_content_wrapper {
-    width: 900px;
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    padding: 6.5em 0;
+    background: url('../images/interstellar_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    #dark {
+      background: #000;
+      position: absolute;
+      width: 1350px;
+      height: 620px;
+      max-width: 1350px;
+      max-height: 620px;
+      opacity: .6;
+      margin-top: -104px;
+      z-index: 1;
+    }
+    #banner_content_wrapper {
+      width: 900px;
+      max-width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
   #poster {
     width: 275px;
     position: relative;
@@ -98,11 +114,12 @@ h1, h2, h3, h4, h5, h6 {
     float: left;
     width: 500px;
     margin-left: 100px;
-
     .title {
       display: inline;
       font-size: 1.75em;
+      font-weight: 400;
       color: $white;
+      border-bottom: 2px solid rgba(112, 225, 138, .5);
     }
     .ratings {
       display: inline;
@@ -117,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
     .description {
-      color: #bbbebf;
+      color: #E6E8ED;
       font-size: 1em;
       line-height: 2;
     }
@@ -206,8 +223,7 @@ h1, h2, h3, h4, h5, h6 {
       color: $white;
       &:hover {
         background-color: #363639;
-        border: 1px solid $highlight;
-
+        border: 1px solid #A0FABE;
         padding-left: 2em;
         transition: .3s;
       }
@@ -217,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
       outline: none;
       padding: 1em 4.5em;
       border-radius: 2em;
-      background: $highlight;
+      background: #67BF85;
       color: $white;
       font-weight: bold;
       margin-top: 3em;
@@ -230,14 +246,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main_footer {
-  padding: 2.5em 0;
+  padding: 1.5em 0;
   text-align: center;
   background: #e4e5ec;
   .logo {
-    font-size: 1.2em;
+    font-size: 1.7em;
     font-weight: 700;
     span {
-      font-weight: 300;
+      font-weight: 400;
       color: $highlight;
     }
   }
