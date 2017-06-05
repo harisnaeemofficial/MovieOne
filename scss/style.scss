@@ -59,6 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 }
 
+.menu {
+  display: none;
+}
+
 #banner {
     padding: 6.5em 0;
     background: url('../images/interstellar_background.jpg');
@@ -299,4 +303,128 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+}
+
+@media only screen and (max-width: 768px) {
+  #main_nav {
+    display: none;
+  }
+  #main_nav.active {
+    display:block;
+    width: 100%;
+    a {
+      display: block;
+      padding: 1em 0;
+      &:hover {
+        border: none;
+      }
+    }
+  }
+  .menu {
+    display: block;
+    float: right;
+    border-bottom: none;
+    i {
+      font-size: 2em;
+      padding-top: .6em;
+    }
+  }
+
+  // banner
+  #banner {
+      padding: 3.5em 0;
+    /*  #dark {
+        background: #000;
+        position: absolute;
+        width: 1350px;
+        height: 620px;
+        max-width: 1350px;
+        max-height: 620px;
+        opacity: .6;
+        margin-top: -104px;
+        z-index: 1;
+      }*/
+      #banner_content_wrapper {
+        width: 900px;
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      #poster {
+      width: 250px;
+      position: relative;
+      float: left;
+      .featured_movie {
+        width: 100%;
+        max-width: 100%;
+        border-radius: .5em;
+        box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+        -webkit-box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+        -moz-box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+        transition: all .2s ease-in-out;
+        &:hover {
+          box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.90);
+          -webkit-box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.90);
+          -moz-box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.90);
+          transform: scale(1.1);
+          filter: contrast(105%);
+          filter: brightness(1.1);
+        }
+      }
+      .play_button {
+        position: absolute;
+        width: 80px;
+        top: 50%;
+        left: 50%;
+        margin: -40px 0 0 -33px;
+      }
+      .play_button:hover {
+        transform: scale(1.2);
+        transition: all .6s;
+      }
+    }
+    #content {
+      float: left;
+      width: 500px;
+      margin-left: 50px;
+      .title {
+        display: inline;
+        font-size: 1.75em;
+        font-weight: 400;
+        color: $white;
+        border-bottom: 2px solid rgba(112, 225, 138, .5);
+      }
+      .ratings {
+        display: inline;
+        margin-left: 1em;
+        i {
+          color: $highlight;
+          font-size: 1.35em;
+          margin: 0 .15em;
+        }
+        .inactive {
+          color: #48494d;
+        }
+      }
+      .description {
+        color: #E6E8ED;
+        font-size: 1em;
+        line-height: 2;
+      }
+      .info {
+        color: $white;
+        font-size: .8em;
+        font-weight: 700;
+        margin-top: 3em;
+        span {
+          margin: 0 .5em;
+        }
+      }
+    }
+  }
+
 }
