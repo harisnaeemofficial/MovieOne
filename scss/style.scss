@@ -1,3 +1,4 @@
+
 $main: #252529;
 $secondary: #8b8b9f;
 $highlight: #32BF61;
@@ -70,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     width: 100%;
     #dark {
+      display: none;
       background: #000;
       position: absolute;
       width: 1350px;
@@ -127,12 +129,14 @@ h1, h2, h3, h4, h5, h6 {
     float: left;
     width: 500px;
     margin-left: 100px;
+
     .title {
       display: inline;
       font-size: 1.75em;
       font-weight: 400;
       color: $white;
       border-bottom: 2px solid rgba(112, 225, 138, .5);
+      text-shadow: 0 0 10px #2d0000;
     }
     .ratings {
       display: inline;
@@ -141,6 +145,11 @@ h1, h2, h3, h4, h5, h6 {
         color: $highlight;
         font-size: 1.35em;
         margin: 0 .15em;
+        transition: all .2s ease-in-out;
+        &:hover {
+          transform: scale(1.5);
+          filter: brightness(120%);
+        }
       }
       .inactive {
         color: #48494d;
@@ -150,12 +159,14 @@ h1, h2, h3, h4, h5, h6 {
       color: #E6E8ED;
       font-size: 1em;
       line-height: 2;
+      text-shadow: 0 0 10px #2d0000;
     }
     .info {
       color: $white;
       font-size: .8em;
       font-weight: 700;
       margin-top: 3em;
+      text-shadow: 0 0 10px #2d0000;
       span {
         margin: 0 .5em;
       }
@@ -313,10 +324,16 @@ h1, h2, h3, h4, h5, h6 {
     display:block;
     width: 100%;
     a {
-      display: block;
-      padding: 1em 0;
+      display: table;
+      margin: 0 auto;
+      margin-top: 1em;
+      color: #393939;
+      padding: 0 .4em;
+      font-weight: bold;
+      transition: all .2s ease-in-out;
       &:hover {
         border: none;
+        color: #00c37d;
       }
     }
   }
@@ -388,43 +405,129 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
     #content {
-      float: left;
-      width: 500px;
       margin-left: 50px;
       .title {
-        display: inline;
-        font-size: 1.75em;
-        font-weight: 400;
-        color: $white;
-        border-bottom: 2px solid rgba(112, 225, 138, .5);
+        font-size: 1.5em;
       }
       .ratings {
-        display: inline;
-        margin-left: 1em;
         i {
-          color: $highlight;
-          font-size: 1.35em;
-          margin: 0 .15em;
-        }
-        .inactive {
-          color: #48494d;
+          font-size: 1em;
         }
       }
       .description {
         color: #E6E8ED;
-        font-size: 1em;
+        font-size: .9em;
         line-height: 2;
       }
       .info {
-        color: $white;
-        font-size: .8em;
-        font-weight: 700;
-        margin-top: 3em;
+        margin-top: 2em;
         span {
-          margin: 0 .5em;
+          margin: 0 .25em;
         }
       }
     }
   }
 
+  #top_movies, #top_shows {
+    padding: 2.5em 0;
+    header {
+      padding: 0 0 1.5em 1.25%;
+      h2 {
+        font-size: 1.5em;
+        font-weight: 400;
+      }
+      .view_more {
+        margin: .75em 0;
+        color: $highlight;
+        &:hover {
+          color: #49E37C;
+        }
+      }
+    }
+  }
+  .row {
+    .post {
+      width: 30.6%;
+      margin: 1em 1.25% 2em 1.25%;
+      .title {
+        font-size: 1em;
+        margin: .5em 0 0 0;
+      }
+      .post_info {
+        font-size: .65em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #dark {
+    display: none;
+  }
+  #banner {
+    #banner_content_wrapper {
+      display: block;
+      #poster {
+        width: 250px;
+        float: none;
+        display: block;
+        margin: 1em auto;
+      }
+      #content {
+        width: 100%;
+        margin: 1em auto 0 auto;
+      }
+    }
+  }
+
+  #top_shows, #top_movies {
+    header {
+      margin-bottom: 1em;
+    }
+  }
+
+  .row {
+    .post {
+      width: 250px;
+      margin: 0 auto 2em auto;
+      float: none;
+      .title {
+        font-size: 1em;
+        margin: .5em 0 0 0;
+      }
+      .post_info {
+        font-size: .65em;
+      }
+    }
+  }
+
+  #newsletter {
+    padding: 3em 0;
+    h2 {
+      font-size: 1.35em;
+    }
+    .newsletter_inner {
+      max-width: 90%;
+    }
+    .signup_form {
+      margin-top: 2em;
+      input[type="text"], input[type="email"] {
+        width: 90%;
+        margin: 0 0 1em 0;
+      }
+    }
+  }
+
+  #main_footer {
+    .logo {
+      font-size: 1.2em;
+      margin-top: .5em;
+    }
+    .copyright {
+      font-size: .7em;
+    }
+    .links {
+      font-size: .9em;
+    }
+  }
 }
